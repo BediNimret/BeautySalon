@@ -8,6 +8,8 @@ import {
   FiPhone,
   FiUser,
 } from "react-icons/fi";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 import { ImCancelCircle } from "react-icons/im";
 
 const Contact = ({ service }) => {
@@ -15,13 +17,13 @@ const Contact = ({ service }) => {
     name: "",
     phone: "",
     selectedServices: "",
-    date: "",
+    date: null,
     error: true,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [date, setDate] = useState("");
+  const [date, setDate] = useState(null);
   const [selectedServices, setSelectedServices] = useState(service);
 
   useEffect(() => {
@@ -55,7 +57,7 @@ const Contact = ({ service }) => {
         name: "",
         phone: "",
         selectedServices: "",
-        date: "",
+        date: null,
         error: false,
       };
     }
@@ -166,21 +168,18 @@ const Contact = ({ service }) => {
                 Select Services
               </label>
               <div className="flex flex-wrap gap-2 mb-4">
-                {
-                 
-                  selectedServices.map((service) => (
-                    <div
-                      key={service}
-                      className="flex items-center bg-yellow-100 rounded-full px-4 py-2 text-sm text-yellow-700 font-medium transition-all hover:bg-yellow-200"
-                    >
-                      <span>{service}</span>
-                      <ImCancelCircle
-                        className="text-lg ml-2 text-red-900 cursor-pointer"
-                        onClick={() => toggleServices(service)}
-                      />
-                    </div>
-                  ))
-                }
+                {selectedServices.map((service) => (
+                  <div
+                    key={service}
+                    className="flex items-center bg-yellow-100 rounded-full px-4 py-2 text-sm text-yellow-700 font-medium transition-all hover:bg-yellow-200"
+                  >
+                    <span>{service}</span>
+                    <ImCancelCircle
+                      className="text-lg ml-2 text-red-900 cursor-pointer"
+                      onClick={() => toggleServices(service)}
+                    />
+                  </div>
+                ))}
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3">
                 {services.map((service) => (
@@ -218,18 +217,19 @@ const Contact = ({ service }) => {
               </div>
             </div>
             {/* date */}
-            <div className="flex items-center border border-2 border-yellow-400  rounded-md p-2 font-semibold">
+            <div className="flex items-center border border-2 border-yellow-400  rounded-md pl-2 font-semibold">
               <FiCalendar className="text-yellow-500 mr-2" />
-              <input
-                type="date"
-                value={date}
-                className="flex-grow outline-none "
-                placeholder=""
-                onChange={(e) => {
-                  setDate(e.target.value);
+              <DatePicker
+                selected={date}
+                onChange={(date) => {
+                  setDate(date);
                   setError({ ...error, date: "" });
                   setIsSubmitting(false);
                 }}
+                dateFormat={"dd/MM/yyyy"}
+                className="flex-grow outline-none p-2"
+                minDate={new Date()}
+                placeholderText="Select Booking Date"
               />
               {error.date && (
                 <p className="text-red-400 text-sm mt-1 ml-1 flex items-center gap-1">
