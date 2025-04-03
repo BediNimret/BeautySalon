@@ -124,17 +124,29 @@ const Topbar = () => {
                 onClick={() => setIcon(!icon)}
                 className="relate"
               />
-              <SmallScreenMenu name="Home" link="home" number={"top-22"} />
-              <SmallScreenMenu name="About" link="about" number={"top-32"} />
+              <SmallScreenMenu
+                name="Home"
+                link="home"
+                number={"top-32"}
+                smallScreen={"sm:top-27"}
+              />
+              <SmallScreenMenu
+                name="About"
+                link="about"
+                number={"top-42"}
+                smallScreen={"sm:top-37"}
+              />
               <SmallScreenMenu
                 name="Services"
                 link="services"
-                number={"top-42"}
+                number={"top-52"}
+                smallScreen={"sm:top-47"}
               />
               <SmallScreenMenu
                 name="Contact"
                 link="contact"
-                number={"top-52"}
+                number={"top-62"}
+                smallScreen={"sm:top-57"}
               />
             </>
           )}
