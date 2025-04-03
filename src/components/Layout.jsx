@@ -6,13 +6,14 @@ import Contact from "./Contact";
 import Services from "./Services";
 
 const Layout = () => {
+  const [service, setService] = React.useState([]);
   return (
     <div className=" bg-gradient-to-b from-[#Fcdbdc] to-[#eed6c2]">
       <Topbar />
       <Home />
       <About />
-      <Services />
-      <Contact />
+      <Services setService={setService} />
+      <Contact service={service} />
     </div>
   );
 };

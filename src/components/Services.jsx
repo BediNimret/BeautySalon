@@ -8,6 +8,7 @@ import {
 } from "react-icons/gi";
 import { FaSpa, FaSmile } from "react-icons/fa";
 import { MdFace, MdOutlineSelfImprovement } from "react-icons/md";
+import { Link } from "react-scroll";
 
 // Import local images
 
@@ -81,7 +82,7 @@ const serviceList = [
   },
   {
     id: 5,
-    title: "Luxe Refinement ",
+    title: "Luxe Refinement",
     price: " 999",
     image: "./HSC.jpg",
     tags: [
@@ -156,7 +157,7 @@ const serviceList = [
     icon: <FaSmile className="w-8 h-8 text-amber-600" />,
   },
 ];
-const Services = () => {
+const Services = ({ setService }) => {
   return (
     <div id="services" className="py-20">
       <div className=" mx-auto px-4 ms:px-6 lg:px-8">
@@ -179,16 +180,28 @@ const Services = () => {
                   className="absolute z-0 w-full h-full  object-cover transform transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                 ></img>
-                {/* <div className="absolute top-4 right-4 z-10 bg-white/30 backdrop-blur-sm p-2 rounded-full">
-                  {service.icon}
-                </div> */}
+
                 <div className=" absolute  bottom-4 left-4 z-10 p-4  ">
                   <span className="bg-amber-500/90 text-white px-5 py-2 rounded-full text-sm front-bold shadow-lg">
                     &#x20B9; {service.price}
                   </span>
                 </div>
                 <div className=" absolute  bottom-2 right-4 z-10 p-4  ">
-                  <button className="!p-0 !h-10 !w-25">Book Now</button>
+                  <Link
+                    className="cursor-pointer"
+                    to="contact"
+                    smooth={true}
+                    offset={200}
+                  >
+                    <button
+                      className="!p-0 !h-10 !w-25"
+                      onClick={() => {
+                        setService([service.title]);
+                      }}
+                    >
+                      Book Now
+                    </button>
+                  </Link>
                 </div>
 
                 <div className="flex flex-wrap gap-2 m-3">

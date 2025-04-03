@@ -23,7 +23,14 @@ const Home = () => {
           </h1>
           <div className="pt-10 ">
             <button>
-              Contact Us
+              <Link
+                className="cursor-pointer"
+                to="contact"
+                smooth={true}
+                offset={200}
+              >
+                Contact Us
+              </Link>
               <div class="star star-1">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
