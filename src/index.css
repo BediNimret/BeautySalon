@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+h1 {
+  font-family: "Tangerine", cursive;
+}
+
+.active {
+  text-decoration: underline;
+}
+
+button {
+  position: relative;
+  padding: 12px 35px;
+  background: #fec195;
+  font-size: 17px;
+  font-weight: 500;
+  color: #181818;
+  border: 3px solid #fec195;
+  border-radius: 8px;
+  box-shadow: 0 0 0 #fec1958c;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.star {
+  position: absolute;
+  width: 0;
+  height: auto;
+  filter: drop-shadow(0 0 0 #fffdef);
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.05, 0.83, 0.43, 0.96);
+}
+
+button:hover {
+  background: transparent;
+  color: #e25e00;
+  box-shadow: 0 0 25px #fec1958c;
+  transform: scale(1.1);
+}
+
+button:hover .star-1 {
+  top: -80%;
+  left: -30%;
+  width: 25px;
+  filter: drop-shadow(0 0 10px #fffdef);
+}
+
+button:hover .star-2 {
+  top: -25%;
+  left: 10%;
+  width: 15px;
+  filter: drop-shadow(0 0 10px #fffdef);
+}
+
+button:hover .star-3 {
+  top: 55%;
+  left: 25%;
+  width: 5px;
+  filter: drop-shadow(0 0 10px #fffdef);
+}
+
+button:hover .star-4 {
+  top: 30%;
+  left: 80%;
+  width: 8px;
+  filter: drop-shadow(0 0 10px #fffdef);
+}
+
+button:hover .star-5 {
+  top: 25%;
+  left: 115%;
+  width: 15px;
+  filter: drop-shadow(0 0 10px #fffdef);
+}
+
+button:hover .star-6 {
+  top: 5%;
+  left: 60%;
+  width: 5px;
+  filter: drop-shadow(0 0 10px #fffdef);
+}
+
+.fil0 {
+  fill: #fffdef;
+}
