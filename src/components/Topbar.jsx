@@ -37,22 +37,22 @@ const Topbar = () => {
         <div className="flex flex-col sm:flex-row  items-center justify-end w-fit  sm:space-x-4 md:space-x-14 lg:space-x-32">
           <div className={FirstThreeIconClass}>
             <a
-              href="https://www.google.com/maps/place/28%C2%B041'58.0%22N+77%C2%B025'32.7%22E/@28.6994385,77.4231737,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.6994385!4d77.4257486?entry=ttu&g_ep=EgoyMDI1MDQwMS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
-              id="smallLinkButton"
-              className={style}
-            >
-              <BiMap className="mr-2" />
-              Raj nagar
-            </a>
-          </div>
-          <div className={FirstThreeIconClass}>
-            <a
               href="https://www.google.com/maps/place/28%C2%B039'45.0%22N+77%C2%B023'04.8%22E/@28.6624991,77.3820936,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.6624991!4d77.3846685?entry=ttu&g_ep=EgoyMDI1MDQwMS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
               id="smallLinkButton"
               className={style}
             >
               <BiMap className="mr-2" />
               Vasundhara Branch
+            </a>
+          </div>
+          <div className={FirstThreeIconClass}>
+            <a
+              href="https://www.google.com/maps/place/28%C2%B041'58.0%22N+77%C2%B025'32.7%22E/@28.6994385,77.4231737,17z/data=!3m1!4b1!4m4!3m3!8m2!3d28.6994385!4d77.4257486?entry=ttu&g_ep=EgoyMDI1MDQwMS4wIKXMDSoJLDEwMjExNDU1SAFQAw%3D%3D"
+              id="smallLinkButton"
+              className={style}
+            >
+              <BiMap className="mr-2" />
+              Raj nagar
             </a>
           </div>
         </div>

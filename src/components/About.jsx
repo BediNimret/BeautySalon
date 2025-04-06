@@ -9,7 +9,7 @@ const About = () => {
   const services = [
     {
       id: 1,
-      title: "Expert Stylists",
+      title: "Experienced Stylists",
 
       description: "Certified professionals with artistic vision",
       icon: <TiScissors className="w-8 h-8 text-amber-600" />,
@@ -41,7 +41,7 @@ const About = () => {
           <div className="flex items-center space-x-3 bg-rose-100 px-4 py-2 rounded-full w-fit mb-3">
             <FiAward className="text-rose-400" />
             <span className="text-sm font-semibold text-rose-800">
-              World Class Services
+              Hygienic and Best Services
             </span>
           </div>
           <div className="absolute insert-0 rounded-3xl bg-gradient-to-r from-rose-200 to-rose-400 transform  group-hover:rotate-3 transition-all duration-300"></div>
