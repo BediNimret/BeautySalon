@@ -4,6 +4,7 @@ import About from "./About";
 import Home from "./Home";
 import Contact from "./Contact";
 import Services from "./Services";
+import Lowerpannel from "./Lowerpannel";
 
 const Layout = () => {
   const [service, setService] = React.useState([]);
@@ -17,6 +18,7 @@ const Layout = () => {
       <About />
       <Services setService={setService} />
       <Contact service={service} />
+      <Lowerpannel />
     </div>
   );
 };
